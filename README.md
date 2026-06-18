@@ -19,11 +19,10 @@ Every page is fully bilingual. The **EN / יידיש** toggle in the navbar swit
 
 ## Tech
 
-Pure static site — no build step, no dependencies.
+Pure static site — no build step, no dependencies. Each page is **fully self-contained**: the CSS and JavaScript are inlined into every HTML file, so the design shows no matter how the file is opened (double-clicked, in a preview pane, or on a web host).
 
 - `index.html`, `about.html`, `segulos.html`, `partner.html`
-- `css/style.css` — midnight theme, starfield, responsive layout
-- `js/main.js` — language toggle, mobile nav, reveal-on-scroll, demo form
+- Inlined per page: midnight theme + starfield + responsive layout (CSS), and the language toggle / mobile nav / reveal-on-scroll / demo form (JS).
 
 Fonts are loaded from Google Fonts (Cormorant Garamond, Inter, Frank Ruhl Libre, Heebo).
 
