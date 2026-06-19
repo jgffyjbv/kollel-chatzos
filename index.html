@@ -289,8 +289,9 @@ body.lang-yi .quote { padding: 6px 24px 6px 0; }
 .badge {
   position: absolute; top: -13px; inset-inline-start: 50%; transform: translateX(-50%);
   background: var(--gold); color: #fff; font-size: .7rem; font-weight: 700;
-  padding: 4px 14px; border-radius: 999px; letter-spacing: .1em; text-transform: uppercase;
+  padding: 4px 14px; border-radius: 999px; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap;
 }
+body.lang-yi .badge { letter-spacing: 0; font-size: .66rem; }
 
 /* ---------- contact ---------- */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
