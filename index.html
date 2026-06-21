@@ -159,9 +159,12 @@ body.lang-yi .nav-links a, body.lang-yi .brand-sub { font-family: 'Frank Ruhl Li
 
 /* ---------- hero ---------- */
 .hero {
-  padding: clamp(80px, 13vw, 140px) 0 90px; text-align: center;
-  background: linear-gradient(180deg, var(--bg-cream), var(--bg));
+  position: relative; display: flex; align-items: center; justify-content: center;
+  min-height: 74vh; padding: clamp(90px, 13vw, 150px) 0 110px; text-align: center;
+  background: linear-gradient(180deg, rgba(13,19,44,.74), rgba(13,19,44,.60)), url("hero-learning.jpg") center/cover no-repeat;
 }
+.hero .btn-ghost { border-color: rgba(255,255,255,.75); color: #fff; background: transparent; }
+.hero .btn-ghost:hover { background: #fff; color: var(--navy); border-color: #fff; }
 .hero .moon {
   width: 92px; height: 92px; margin: 0 auto 26px; border-radius: 50%;
   background: radial-gradient(circle at 38% 35%, #fff3d4, var(--gold-200) 55%, var(--gold) 88%);
@@ -174,11 +177,11 @@ body.lang-yi .nav-links a, body.lang-yi .brand-sub { font-family: 'Frank Ruhl Li
 }
 .hero h1 {
   font-size: clamp(2.6rem, 7vw, 5.2rem); margin: 8px 0 6px;
-  letter-spacing: 0.4px; color: var(--navy);
+  letter-spacing: 0.4px; color: #fff;
 }
-.hero .brand-script { display: block; color: var(--gold-deep); font-size: clamp(1.4rem, 3.4vw, 2.2rem); font-weight: 500; }
+.hero .brand-script { display: block; color: var(--gold-200); font-size: clamp(1.4rem, 3.4vw, 2.2rem); font-weight: 500; }
 .hero .lede {
-  max-width: 720px; margin: 22px auto 0; color: var(--ink-soft);
+  max-width: 720px; margin: 22px auto 0; color: rgba(255,255,255,.85);
   font-size: clamp(1.05rem, 1.6vw, 1.22rem);
 }
 .hero-cta { margin-top: 36px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
@@ -378,7 +381,8 @@ footer.foot {
   </header>
 
   <!-- HERO -->
-  <section class="hero wrap">
+  <section class="hero">
+   <div class="hero-inner wrap">
     <div class="moon"></div>
     <p class="eyebrow"><span class="en">Established · Close to Five Years of Light</span><span class="yi">נתייסד געווארן · קרוב צו פינף יאר פון לעכטיגקייט</span></p>
     <h1>
@@ -394,6 +398,7 @@ footer.foot {
       <a href="partner.html" class="btn btn-gold"><span class="en">Become a Partner ✦</span><span class="yi">✦ ווערט א שותף</span></a>
       <a href="about.html" class="btn btn-ghost"><span class="en">What We Do</span><span class="yi">אונזער שליחות</span></a>
     </div>
+   </div>
   </section>
 
   <!-- STATS -->
