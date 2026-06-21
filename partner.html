@@ -308,9 +308,9 @@ body.lang-yi .badge { letter-spacing: 0; font-size: .66rem; }
 .info-line span { color: var(--ink-soft); font-size: .92rem; }
 
 /* ---------- interior page hero ---------- */
-.page-hero { text-align: center; padding: 76px 0 26px; background: linear-gradient(180deg, var(--bg-cream), var(--bg)); }
-.page-hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin: 10px 0 8px; }
-.page-hero p { color: var(--ink-soft); max-width: 660px; margin: 0 auto; }
+.page-hero { position: relative; text-align: center; padding: clamp(64px,8vw,104px) 0 clamp(50px,6vw,76px); background: linear-gradient(180deg, rgba(13,19,44,.78), rgba(13,19,44,.64)), url("hero-learning.jpg") center/cover no-repeat; }
+.page-hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin: 10px 0 8px; color: #fff; }
+.page-hero p { color: rgba(255,255,255,.86); max-width: 660px; margin: 0 auto; }
 
 /* ---------- footer ---------- */
 footer.foot {
@@ -376,10 +376,12 @@ footer.foot {
     </div>
   </header>
 
-  <section class="page-hero wrap">
+  <section class="page-hero">
+   <div class="page-hero-inner wrap">
     <p class="eyebrow"><span class="en">Become a Partner</span><span class="yi">ווערט א שותף</span></p>
     <h1><span class="en">Yissachar &amp; Zevulun</span><span class="yi">יששכר וזבולון</span></h1>
     <p><span class="en">You now have the golden opportunity of becoming a partner in this sublime mitzvah. The chashuva young men will have you and your family in mind — that all your deepest wishes and requests be fulfilled.</span><span class="yi">איר האט יעצט א גאלדענע געלעגנהייט צו ווערן א שותף אין די דאזיגע הייליגע מצוה. די חשוב'ע יונגעלייט וועלן אייך און אייער משפחה האבן אינזין און מתפלל זיין אז אלע אייערע טיפסטע בקשות און הארץ-ווינטשן זאלן נתקבל ווערן לרחמים ולרצון.</span></p>
+   </div>
   </section>
 
   <!-- WHY SUPPORT -->

@@ -308,9 +308,9 @@ body.lang-yi .badge { letter-spacing: 0; font-size: .66rem; }
 .info-line span { color: var(--ink-soft); font-size: .92rem; }
 
 /* ---------- interior page hero ---------- */
-.page-hero { text-align: center; padding: 76px 0 26px; background: linear-gradient(180deg, var(--bg-cream), var(--bg)); }
-.page-hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin: 10px 0 8px; }
-.page-hero p { color: var(--ink-soft); max-width: 660px; margin: 0 auto; }
+.page-hero { position: relative; text-align: center; padding: clamp(64px,8vw,104px) 0 clamp(50px,6vw,76px); background: linear-gradient(180deg, rgba(13,19,44,.78), rgba(13,19,44,.64)), url("hero-learning.jpg") center/cover no-repeat; }
+.page-hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); margin: 10px 0 8px; color: #fff; }
+.page-hero p { color: rgba(255,255,255,.86); max-width: 660px; margin: 0 auto; }
 
 /* ---------- footer ---------- */
 footer.foot {
@@ -376,10 +376,12 @@ footer.foot {
     </div>
   </header>
 
-  <section class="page-hero wrap">
+  <section class="page-hero">
+   <div class="page-hero-inner wrap">
     <p class="eyebrow"><span class="en">Segulos & Maalos</span><span class="yi">ברכות און סגולות</span></p>
     <h1><span class="en">The Power of Chatzos</span><span class="yi">די געוואלדיגע כוח פון חצות</span></h1>
     <p><span class="en">These are the words of the Zohar Hakadosh, the Kaf HaChaim and the tzaddikim about the one who rises at chatzos to toil in Torah — and the share that the partners of the Kollel take in every one of them.</span><span class="yi">דאס זענען די הייליגע ווערטער פונעם זוהר הקדוש, דעם כף החיים, און פון צדיקים איבער די וואס שטייען אויף חצות הלילה זיך מוסר נפש זיין צו לערנען די הייליגע תורה – און די חלק וואס די שותפי הכולל האבן אין יעדן איינעם פון די דאזיגע ברכות.</span></p>
+   </div>
   </section>
 
   <!-- SEGULOS GRID (from English flyer) -->
