@@ -346,7 +346,19 @@ footer.foot {
   .foot-grid { grid-template-columns: 1fr; }
   section { padding: 56px 0; }
 }
-  </style>
+  /* ===== polish & breathing room (added) ===== */
+section{ padding-block: clamp(88px,11vw,140px); }
+.eyebrow{ margin-bottom: 1.1rem; }
+.section-title{ margin-bottom: 1.1rem; line-height: 1.14; }
+.grid{ gap: clamp(22px,2.4vw,34px); }
+.grid-2,.grid-3,.grid-4{ margin-top: clamp(40px,5vw,64px); }
+.card{ padding: clamp(28px,3vw,38px); }
+.card .ic{ width:54px; height:54px; border-radius:14px; }
+.card .ic svg{ width:26px; height:26px; stroke:currentColor; stroke-width:1.6; fill:none; }
+.card:hover{ box-shadow: 0 26px 50px -22px rgba(22,34,76,.30); }
+.cta-band .panel{ padding: clamp(56px,8vw,96px) clamp(28px,5vw,64px); }
+section.wrap:nth-of-type(even){ background:#FBF8F1; }
+</style>
 </head>
 <body class="lang-en">
   <div class="stars"></div>
@@ -388,17 +400,17 @@ footer.foot {
   <section class="wrap">
     <div class="grid grid-3">
       <div class="card reveal">
-        <div class="ic">🌙</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h6a3 3 0 0 1 3 3v11a2.5 2.5 0 0 0-2.5-2.5H2z"/><path d="M22 5h-6a3 3 0 0 0-3 3v11a2.5 2.5 0 0 1 2.5-2.5H22z"/></svg></div>
         <h3><span class="en">A share in every word of Torah</span><span class="yi">א חלק אין יעדע ווארט תורה</span></h3>
         <p><span class="en">Through the partnership of Yissachar and Zevulun, the supporter shares equally in every word of Torah learned at chatzos.</span><span class="yi">דורך דעם "יששכר וזבולון" שותפות, באקומט דער שטיצער א חלק גלייך אויף גלייך אין יעדע ווארט תורה וואס ווערט געלערנט ביי חצות הלילה.</span></p>
       </div>
       <div class="card reveal">
-        <div class="ic">🙏</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div>
         <h3><span class="en">Davened for by name</span><span class="yi">מען דאווענט פאר אייך מיט'ן נאמען</span></h3>
         <p><span class="en">Every member davens for the supporters of the kollel in the eis ratzon between chatzos and alos hashachar.</span><span class="yi">יעדער מיטגליד פונעם כולל וועט מתפלל זיין פאר די שטיצער דורכאויס די גרויסע עת רצון צווישן חצות און עלות השחר.</span></p>
       </div>
       <div class="card reveal">
-        <div class="ic">✦</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l2.1 7.4 7.4 2.1-7.4 2.1L12 21.5l-2.1-7.4L2.5 12l7.4-2.1z"/></svg></div>
         <h3><span class="en">All the segulos</span><span class="yi">אלע ברכות און השפעות</span></h3>
         <p><span class="en">Mazel, parnassah, refuah, chinuch and shmirah — the supporter takes a share in every one of the segulos of chatzos.</span><span class="yi">מזל, פרנסה, רפואה, נחת פונעם עתיד (חינוך), און שמירה — דער שותף באקומט א חלק אין אלע ברכות און השפעות וואס קומען אראפ דורך דעם לימוד ביי חצות.</span></p>
       </div>
@@ -477,12 +489,12 @@ footer.foot {
       <p style="color:var(--muted);max-width:620px;margin:8px auto 0;"><span class="en">Tell us what to daven for, and the lomdim will have it in mind in the holiest hours of the night.</span><span class="yi">זאגט אונז וואס איר דארפט, און די תלמידי חכמים וועלן מתפלל זיין פאר אייך אין די הייליגסטע שעות פון די נאכט.</span></p>
     </div>
     <div class="grid grid-3">
-      <div class="card reveal"><div class="ic">💰</div><h3><span class="en">Parnassah</span><span class="yi">פרנסה</span></h3><p><span class="en">For livelihood, success and relief from debt.</span><span class="yi">פאר הרחבת הדעת, הצלחה, און צו ווערן באפרייט פון חובות.</span></p></div>
-      <div class="card reveal"><div class="ic">💗</div><h3><span class="en">Refuah</span><span class="yi">רפואה</span></h3><p><span class="en">For a refuah sheleimah for a choleh b'shem.</span><span class="yi">פאר א רפואה שלימה פארן חולה, מיט'ן נאמען.</span></p></div>
-      <div class="card reveal"><div class="ic">💍</div><h3><span class="en">Shidduch</span><span class="yi">שידוכים</span></h3><p><span class="en">For the right zivug, b'karov uv'nakel.</span><span class="yi">צו טרעפן דעם ריכטיגן זיווג, בקרוב ובנקל.</span></p></div>
-      <div class="card reveal"><div class="ic">👶</div><h3><span class="en">Zera shel kayama</span><span class="yi">זרע של קימא</span></h3><p><span class="en">For children, and for nachas and chinuch.</span><span class="yi">פאר קינדער, נחת, און א ריכטיגע ערציהונג.</span></p></div>
-      <div class="card reveal"><div class="ic">⚖️</div><h3><span class="en">Favorable judgment</span><span class="yi">א גוטע משפט</span></h3><p><span class="en">For a yeshuah in a din, mishpat or matter at hand.</span><span class="yi">פאר א ישועה אין א לעגאלע זאך, א דין תורה, אדער סיי וועלכע פראבלעם.</span></p></div>
-      <div class="card reveal"><div class="ic">🕯️</div><h3><span class="en">L'zecher nishmas</span><span class="yi">לעילוי נשמת</span></h3><p><span class="en">An aliyah for the neshamah of a niftar.</span><span class="yi">פאר אן עליה פאר די נשמה פון א נפטר.</span></p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="5"/><path d="M15.5 5.3a5 5 0 0 1 0 13.4"/><path d="M7 7.5h2M7 10.5h2"/></svg></div><h3><span class="en">Parnassah</span><span class="yi">פרנסה</span></h3><p><span class="en">For livelihood, success and relief from debt.</span><span class="yi">פאר הרחבת הדעת, הצלחה, און צו ווערן באפרייט פון חובות.</span></p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg></div><h3><span class="en">Refuah</span><span class="yi">רפואה</span></h3><p><span class="en">For a refuah sheleimah for a choleh b'shem.</span><span class="yi">פאר א רפואה שלימה פארן חולה, מיט'ן נאמען.</span></p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="14" r="5"/><circle cx="15" cy="9" r="5"/></svg></div><h3><span class="en">Shidduch</span><span class="yi">שידוכים</span></h3><p><span class="en">For the right zivug, b'karov uv'nakel.</span><span class="yi">צו טרעפן דעם ריכטיגן זיווג, בקרוב ובנקל.</span></p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20h10M12 20V10"/><path d="M12 10C12 7 9.5 5 6 5c0 3.5 2.5 5.5 6 5.5z"/><path d="M12 12c0-2.6 2.3-4.4 5.3-4.4 0 2.9-2.3 4.4-5.3 4.4z"/></svg></div><h3><span class="en">Zera shel kayama</span><span class="yi">זרע של קימא</span></h3><p><span class="en">For children, and for nachas and chinuch.</span><span class="yi">פאר קינדער, נחת, און א ריכטיגע ערציהונג.</span></p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M7.5 21h9M4.5 7h15"/><path d="M4.5 7 2 12.5a3 3 0 0 0 6 0z"/><path d="M19.5 7 17 12.5a3 3 0 0 0 6 0z"/></svg></div><h3><span class="en">Favorable judgment</span><span class="yi">א גוטע משפט</span></h3><p><span class="en">For a yeshuah in a din, mishpat or matter at hand.</span><span class="yi">פאר א ישועה אין א לעגאלע זאך, א דין תורה, אדער סיי וועלכע פראבלעם.</span></p></div>
+      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="11.5" width="6" height="9.5" rx="1"/><path d="M9 21h6M12 11.5V9"/><path d="M12 4.5c1.1.9 1.7 1.7 1.7 2.7a1.7 1.7 0 0 1-3.4 0c0-.7.5-1.4 1.7-2.7z"/></svg></div><h3><span class="en">L'zecher nishmas</span><span class="yi">לעילוי נשמת</span></h3><p><span class="en">An aliyah for the neshamah of a niftar.</span><span class="yi">פאר אן עליה פאר די נשמה פון א נפטר.</span></p></div>
     </div>
   </section>
 

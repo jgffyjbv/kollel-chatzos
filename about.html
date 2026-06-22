@@ -346,7 +346,19 @@ footer.foot {
   .foot-grid { grid-template-columns: 1fr; }
   section { padding: 56px 0; }
 }
-  </style>
+  /* ===== polish & breathing room (added) ===== */
+section{ padding-block: clamp(88px,11vw,140px); }
+.eyebrow{ margin-bottom: 1.1rem; }
+.section-title{ margin-bottom: 1.1rem; line-height: 1.14; }
+.grid{ gap: clamp(22px,2.4vw,34px); }
+.grid-2,.grid-3,.grid-4{ margin-top: clamp(40px,5vw,64px); }
+.card{ padding: clamp(28px,3vw,38px); }
+.card .ic{ width:54px; height:54px; border-radius:14px; }
+.card .ic svg{ width:26px; height:26px; stroke:currentColor; stroke-width:1.6; fill:none; }
+.card:hover{ box-shadow: 0 26px 50px -22px rgba(22,34,76,.30); }
+.cta-band .panel{ padding: clamp(56px,8vw,96px) clamp(28px,5vw,64px); }
+section.wrap:nth-of-type(even){ background:#FBF8F1; }
+</style>
 </head>
 <body class="lang-en">
   <div class="stars"></div>
@@ -417,17 +429,17 @@ footer.foot {
     </div>
     <div class="grid grid-3">
       <div class="card reveal">
-        <div class="ic">🌙</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.6 6.6 0 0 0 9.7 9.7z"/></svg></div>
         <h3><span class="en">The missing hours</span><span class="yi">די שעות וואס זענען ביז יעצט געווען ליידיג</span></h3>
         <p><span class="en">Before Kollel Chatzos, the night hours were silent. Now they too are filled with limud haTorah — completing the cycle.</span><span class="yi">פאר'ן גרינדן פון כולל חצות זענען די שפעטע נאכט שעות געווען שטיל. היינט אבער זענען די שעות אויך פול מיט תורה, וואס דאס פילט אן דעם גאנצן ציקל פון לערנען אן אויפהער.</span></p>
       </div>
       <div class="card reveal">
-        <div class="ic">🏘</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V8l6-4 6 4v13"/><path d="M9 12h4M9 16h4"/></svg></div>
         <h3><span class="en">Protection</span><span class="yi">שמירה און הגנה</span></h3>
         <p><span class="en">We all know that every hour of Torah brings protection for the surrounding neighborhoods. The night is now guarded.</span><span class="yi">עס איז ביי יעדן באקאנט אז יעדע שעה פון תורה ברענגט א ספעציעלע שמירה פאר די גאנצע ארומיגע געגנט. א דאנק דעם לערנען איז די נאכט יעצט אפגעהיטן.</span></p>
       </div>
       <div class="card reveal">
-        <div class="ic">🔥</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.8 2.7 4.5 4.6 4.5 8.5a4.5 4.5 0 0 1-9 0c0-1.7.7-3 1.8-4.2C10.5 8.5 11.4 6.6 12 3z"/></svg></div>
         <h3><span class="en">Sanctified air</span><span class="yi">א הייליגע אטמאספערע</span></h3>
         <p><span class="en">The lomdim sanctify the very air of the city, drawing down a chut shel chesed over all who live in it.</span><span class="yi">די לערנער מאכן הייליג די גאנצע לופט פון די שטאט, און ציען אראפ א חוט של חסד אויף אלע איינוואוינער.</span></p>
       </div>

@@ -349,7 +349,19 @@ footer.foot {
   .foot-grid { grid-template-columns: 1fr; }
   section { padding: 56px 0; }
 }
-  </style>
+  /* ===== polish & breathing room (added) ===== */
+section{ padding-block: clamp(88px,11vw,140px); }
+.eyebrow{ margin-bottom: 1.1rem; }
+.section-title{ margin-bottom: 1.1rem; line-height: 1.14; }
+.grid{ gap: clamp(22px,2.4vw,34px); }
+.grid-2,.grid-3,.grid-4{ margin-top: clamp(40px,5vw,64px); }
+.card{ padding: clamp(28px,3vw,38px); }
+.card .ic{ width:54px; height:54px; border-radius:14px; }
+.card .ic svg{ width:26px; height:26px; stroke:currentColor; stroke-width:1.6; fill:none; }
+.card:hover{ box-shadow: 0 26px 50px -22px rgba(22,34,76,.30); }
+.cta-band .panel{ padding: clamp(56px,8vw,96px) clamp(28px,5vw,64px); }
+section.wrap:nth-of-type(even){ background:#FBF8F1; }
+</style>
 </head>
 <body class="lang-en">
   <div class="stars"></div>
@@ -470,17 +482,17 @@ footer.foot {
     </div>
     <div class="grid grid-3">
       <div class="card reveal">
-        <div class="ic">✦</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l2.1 7.4 7.4 2.1-7.4 2.1L12 21.5l-2.1-7.4L2.5 12l7.4-2.1z"/></svg></div>
         <h3><span class="en">Illuminates</span><span class="yi">באלייכט</span></h3>
         <p><span class="en">Nekudas Chatzos is a pipeline of yeshuos from the Heavenly wellspring of brachos, brightening the city every night.</span><span class="yi">"נקודת חצות" דינט ווי א רער פאר געטליכע ברכות, וואס באלייכט די שטאט יעדע נאכט מיט א הימלישן קוואל פון שפע.</span></p>
       </div>
       <div class="card reveal">
-        <div class="ic">🛡</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.3-3 7-7 8.5-4-1.5-7-4.2-7-8.5V6z"/><path d="M9.2 12l1.9 1.9 3.7-3.9"/></svg></div>
         <h3><span class="en">Safeguards</span><span class="yi">באשיצט</span></h3>
         <p><span class="en">Every hour of Torah brings protection to the surrounding neighborhoods. Brooklyn now has a full 24-hour cycle of limud haTorah.</span><span class="yi">יעדע שעה פון לערנען ברענגט א ספעציעלע שמירה פאר די ארומיגע געגנטער. ברוקלין געניסט יעצט פון א פולן 24-שעה'דיגן ציקל פון תורה אן קיין איבעררייס.</span></p>
       </div>
       <div class="card reveal">
-        <div class="ic">🤝</div>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6"/><path d="M11 6l1-1a4 4 0 0 1 6 6l-1 1"/><path d="M13 18l-1 1a4 4 0 0 1-6-6l1-1"/></svg></div>
         <h3><span class="en">Connects</span><span class="yi">פארבינדט</span></h3>
         <p><span class="en">Partners are held in mind by the lomdim every night — that all their deepest wishes and tefillos be fulfilled.</span><span class="yi">די שותפים ווערן דערמאנט דורך די לומדים יעדע נאכט מיט ווארעמע תפילות, אז אלע זייערע טיפע בקשות און וואונטשן זאלן נתמלא ווערן לטובה.</span></p>
       </div>
