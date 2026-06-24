@@ -363,10 +363,45 @@ section{ padding-block: clamp(88px,11vw,140px); }
 .card:hover{ box-shadow: 0 26px 50px -22px rgba(22,34,76,.30); }
 .cta-band .panel{ padding: clamp(56px,8vw,96px) clamp(28px,5vw,64px); }
 section.wrap:nth-of-type(even){ background:#FBF8F1; }
+  /* ===== Sprout-inspired polish pass ===== */
+  :root{
+    --radius: 22px;
+    --shadow: 0 10px 30px -14px rgba(22,34,76,.16), 0 3px 8px -5px rgba(22,34,76,.08);
+    --shadow-lg: 0 34px 64px -26px rgba(22,34,76,.24), 0 8px 18px -10px rgba(22,34,76,.10);
+  }
+  .btn{ padding: 14px 30px; }
+  .btn-gold{ box-shadow: 0 14px 28px -10px rgba(179,137,47,.46); }
+  .btn-gold:hover{ box-shadow: 0 20px 38px -10px rgba(179,137,47,.5); }
+  .card{ border-color: rgba(22,34,76,.07); }
+  .card:hover{ transform: translateY(-6px); }
+  .stat{ border-color: rgba(22,34,76,.07); }
+  .segula{ border-radius: 18px; }
+
+  /* ===== Dynamic color · glow · motion (luminous-night) ===== */
+  :root{ --silver:#cfd6e4; --silver-2:#aeb7c9; --silver-soft:rgba(174,183,201,.16); }
+  .glows{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+  .glows span{ position:absolute; border-radius:50%; filter:blur(46px); }
+  .glows .g1{ width:44vw;height:44vw; left:-12vw; top:-10vw; background:radial-gradient(circle,rgba(179,137,47,.20),transparent 70%); animation:kcFloatA 17s ease-in-out infinite; }
+  .glows .g2{ width:40vw;height:40vw; right:-14vw; top:16vh; background:radial-gradient(circle,rgba(36,58,120,.18),transparent 70%); animation:kcFloatB 21s ease-in-out infinite; }
+  .glows .g3{ width:36vw;height:36vw; left:8vw; bottom:-14vw; background:radial-gradient(circle,rgba(207,214,228,.22),transparent 70%); animation:kcFloatA 24s ease-in-out infinite reverse; }
+  @keyframes kcFloatA{ 0%,100%{transform:translate(0,0)} 50%{transform:translate(3.5vw,3vh)} }
+  @keyframes kcFloatB{ 0%,100%{transform:translate(0,0)} 50%{transform:translate(-3vw,2.5vh)} }
+  .stat .num{ background:linear-gradient(135deg,var(--gold-deep),var(--gold-200)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  @media(prefers-reduced-motion:reduce){ .glows span{ animation:none } }
+
+  /* ===== small edge fixes ===== */
+  .wrap{ padding-inline: clamp(20px, 3.6vw, 36px); }
+  section.wrap:nth-of-type(even){ background: transparent; position: relative; }
+  section.wrap:nth-of-type(even)::before{
+    content:""; position:absolute; top:0; bottom:0; left:50%;
+    width:100vw; transform:translateX(-50%);
+    background:linear-gradient(180deg,#FBF8F1,#FCFAF6); z-index:-1;
+  }
 </style>
 </head>
 <body class="lang-en">
   <div class="stars"></div>
+  <div class="glows" aria-hidden="true"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
 
   <header class="nav">
     <div class="nav-inner">
