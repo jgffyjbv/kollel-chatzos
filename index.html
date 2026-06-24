@@ -438,6 +438,17 @@ section.wrap:nth-of-type(even){ background:#FBF8F1; }
   @media(prefers-reduced-motion:reduce){
     .glows span{ animation:none } .marquee__track{ animation:none }
   }
+
+  /* ===== small edge fixes ===== */
+  /* a touch more side gutter so panel/card shadows never clip at the screen edge */
+  .wrap{ padding-inline: clamp(20px, 3.6vw, 36px); }
+  /* make the alternating tint sections full-bleed (edge-to-edge, no centered-band slivers) */
+  section.wrap:nth-of-type(even){ background: transparent; position: relative; }
+  section.wrap:nth-of-type(even)::before{
+    content:""; position:absolute; top:0; bottom:0; left:50%;
+    width:100vw; transform:translateX(-50%);
+    background:linear-gradient(180deg,#FBF8F1,#FCFAF6); z-index:-1;
+  }
 </style>
 </head>
 <body class="lang-en">
