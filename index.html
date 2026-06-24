@@ -405,10 +405,44 @@ section.wrap:nth-of-type(even){ background:#FBF8F1; }
     .quickgive .qg-label{ max-width:none; }
     .quickgive .qg-actions{ justify-content:center; }
   }
+
+  /* ===== Dynamic color · glow · motion (luminous-night, inspired by RFP) ===== */
+  :root{
+    --silver:#cfd6e4; --silver-2:#aeb7c9; --silver-soft:rgba(174,183,201,.16);
+  }
+  /* floating glow orbs */
+  .glows{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; }
+  .glows span{ position:absolute; border-radius:50%; filter:blur(46px); }
+  .glows .g1{ width:44vw;height:44vw; left:-12vw; top:-10vw; background:radial-gradient(circle,rgba(179,137,47,.20),transparent 70%); animation:kcFloatA 17s ease-in-out infinite; }
+  .glows .g2{ width:40vw;height:40vw; right:-14vw; top:16vh; background:radial-gradient(circle,rgba(36,58,120,.18),transparent 70%); animation:kcFloatB 21s ease-in-out infinite; }
+  .glows .g3{ width:36vw;height:36vw; left:8vw; bottom:-14vw; background:radial-gradient(circle,rgba(207,214,228,.22),transparent 70%); animation:kcFloatA 24s ease-in-out infinite reverse; }
+  @keyframes kcFloatA{ 0%,100%{transform:translate(0,0)} 50%{transform:translate(3.5vw,3vh)} }
+  @keyframes kcFloatB{ 0%,100%{transform:translate(0,0)} 50%{transform:translate(-3vw,2.5vh)} }
+
+  /* scrolling value marquee */
+  .marquee{ direction:ltr; overflow:hidden; border-block:1px solid var(--line);
+    background:linear-gradient(90deg,#faf6ec,#ffffff 50%,#faf6ec); position:relative; z-index:2; }
+  .marquee__track{ display:flex; width:max-content; animation:kcScroll 42s linear infinite; }
+  .marquee:hover .marquee__track{ animation-play-state:paused; }
+  .marquee__item{ display:inline-flex; align-items:center; gap:26px; padding:18px 0;
+    white-space:nowrap; font-family:'Cormorant Garamond',serif; font-size:clamp(1.25rem,2.4vw,1.65rem); color:var(--navy); }
+  .marquee__item b{ color:var(--gold-deep); font-weight:600; padding:0 6px; }
+  .marquee__item .sp{ color:var(--silver-2); font-size:.85em; }
+  @keyframes kcScroll{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+  /* a touch more life */
+  .stat .num{ background:linear-gradient(135deg,var(--gold-deep),var(--gold-200));
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  section.wrap:nth-of-type(even){ background:linear-gradient(180deg,#FBF8F1,#FCFAF5); }
+
+  @media(prefers-reduced-motion:reduce){
+    .glows span{ animation:none } .marquee__track{ animation:none }
+  }
 </style>
 </head>
 <body class="lang-en">
   <div class="stars"></div>
+  <div class="glows" aria-hidden="true"><span class="g1"></span><span class="g2"></span><span class="g3"></span></div>
 
   <!-- NAV -->
   <header class="nav">
@@ -490,6 +524,14 @@ section.wrap:nth-of-type(even){ background:#FBF8F1; }
       </div>
     </div>
   </section>
+
+  <!-- VALUE MARQUEE (RFP-style dynamic band) -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span class="marquee__item"><b>Limud HaTorah</b><span class="sp">✦</span><b>Tefillah b'eis ratzon</b><span class="sp">✦</span><b>Chatzos</b><span class="sp">✦</span><b>Yeshuos</b><span class="sp">✦</span><b>Brachos</b><span class="sp">✦</span><b>Shmirah</b><span class="sp">✦</span><b>Kedushas HaLayla</b><span class="sp">✦</span><b>Hatzlacha</b><span class="sp">✦</span></span>
+      <span class="marquee__item"><b>Limud HaTorah</b><span class="sp">✦</span><b>Tefillah b'eis ratzon</b><span class="sp">✦</span><b>Chatzos</b><span class="sp">✦</span><b>Yeshuos</b><span class="sp">✦</span><b>Brachos</b><span class="sp">✦</span><b>Shmirah</b><span class="sp">✦</span><b>Kedushas HaLayla</b><span class="sp">✦</span><b>Hatzlacha</b><span class="sp">✦</span></span>
+    </div>
+  </div>
 
   <!-- INTRO -->
   <section class="wrap">
