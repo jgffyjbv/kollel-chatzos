@@ -361,6 +361,45 @@ section{ padding-block: clamp(88px,11vw,140px); }
 .card:hover{ box-shadow: 0 26px 50px -22px rgba(22,34,76,.30); }
 .cta-band .panel{ padding: clamp(56px,8vw,96px) clamp(28px,5vw,64px); }
 section.wrap:nth-of-type(even){ background:#FBF8F1; }
+
+  /* ===== Sprout-inspired polish pass ===== */
+  :root{
+    --radius: 22px;
+    --shadow: 0 10px 30px -14px rgba(22,34,76,.16), 0 3px 8px -5px rgba(22,34,76,.08);
+    --shadow-lg: 0 34px 64px -26px rgba(22,34,76,.24), 0 8px 18px -10px rgba(22,34,76,.10);
+  }
+  .btn{ padding: 14px 30px; }
+  .btn-gold{ box-shadow: 0 14px 28px -10px rgba(179,137,47,.46); }
+  .btn-gold:hover{ box-shadow: 0 20px 38px -10px rgba(179,137,47,.5); }
+  .card{ border-color: rgba(22,34,76,.07); }
+  .card:hover{ transform: translateY(-6px); }
+  .stat{ border-color: rgba(22,34,76,.07); }
+  .segula{ border-radius: 18px; }
+
+  /* floating quick-give card (Sprout search-bar energy) */
+  .quickgive{
+    background:#fff; border:1px solid rgba(22,34,76,.08); border-radius:28px;
+    box-shadow: 0 36px 80px -34px rgba(22,34,76,.34), 0 10px 24px -12px rgba(22,34,76,.14);
+    padding: clamp(22px,3vw,30px) clamp(24px,3.6vw,42px);
+    display:flex; align-items:center; justify-content:space-between; gap:26px; flex-wrap:wrap;
+  }
+  .quickgive .qg-label{ max-width:430px; }
+  .quickgive .qg-label .eyebrow{ margin-bottom:.45rem; }
+  .quickgive .qg-sub{ color:var(--ink-soft); font-size:.99rem; margin:0; line-height:1.55; }
+  .quickgive .qg-actions{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+  .qg-pill{
+    display:inline-flex; align-items:center; justify-content:center; min-width:66px;
+    padding:13px 20px; border-radius:999px; font-family:'Inter',sans-serif;
+    font-weight:700; font-size:1.02rem; color:var(--navy);
+    background:var(--bg-soft); border:1px solid var(--line); transition:.18s;
+  }
+  body.lang-yi .qg-pill{ font-family:'Frank Ruhl Libre',serif; }
+  .qg-pill:hover{ background:var(--gold-soft); border-color:var(--gold-200); color:var(--gold-deep); transform:translateY(-2px); }
+  @media (max-width:760px){
+    .quickgive{ flex-direction:column; align-items:stretch; text-align:center; }
+    .quickgive .qg-label{ max-width:none; }
+    .quickgive .qg-actions{ justify-content:center; }
+  }
 </style>
 </head>
 <body class="lang-en">
@@ -413,8 +452,24 @@ section.wrap:nth-of-type(even){ background:#FBF8F1; }
    </div>
   </section>
 
+  <!-- QUICK GIVE (floating · Sprout-style) -->
+  <section class="wrap" style="margin-top:clamp(-72px,-6vw,-44px);padding-top:0;padding-bottom:0;position:relative;z-index:5;">
+    <div class="quickgive reveal">
+      <div class="qg-label">
+        <p class="eyebrow"><span class="en">Dedicate a night</span><span class="yi">ווידמעט א נאכט</span></p>
+        <p class="qg-sub"><span class="en">Partner with the lomdim in one click — for a refuah, yeshuah, or as a zechus.</span><span class="yi">ווערט א שותף מיט די לומדים אין איין קליק — פאר א רפואה, ישועה, אדער אלס א זכות.</span></p>
+      </div>
+      <div class="qg-actions">
+        <a href="https://www.firstaccept.net/HANETZACH?amount=36" target="_blank" rel="noopener" class="qg-pill">$36</a>
+        <a href="https://www.firstaccept.net/HANETZACH?amount=180" target="_blank" rel="noopener" class="qg-pill">$180</a>
+        <a href="https://www.firstaccept.net/HANETZACH?amount=360" target="_blank" rel="noopener" class="qg-pill">$360</a>
+        <a href="partner.html" class="btn btn-gold"><span class="en">Become a Partner ✦</span><span class="yi">✦ ווערט א שותף</span></a>
+      </div>
+    </div>
+  </section>
+
   <!-- STATS -->
-  <section class="wrap" style="padding-top:0;">
+  <section class="wrap" style="padding-top:clamp(54px,6vw,72px);">
     <div class="stats reveal">
       <div class="stat">
         <div class="num">24</div>
