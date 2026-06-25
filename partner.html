@@ -397,7 +397,116 @@ section.wrap:nth-of-type(even){ background:#FBF8F1; }
     width:100vw; transform:translateX(-50%);
     background:linear-gradient(180deg,#FBF8F1,#FCFAF6); z-index:-1;
   }
-</style>
+
+/* ============================================================
+   READABILITY & CLARITY POLISH
+   Layers on top of existing CSS. Bigger, clearer, calmer.
+   No color/font/layout changes — only size, leading, contrast,
+   spacing. Hebrew/Yiddish (.yi / body.lang-yi) gets extra size
+   + generous line-height. Keeps the navy/gold luminous look.
+   ============================================================ */
+
+/* ---- 1. Comfortable reading baseline + darker muted ink ---- */
+:root{
+  --ink-soft: #474f6b;          /* darken muted body text for contrast on cream/white */
+  --muted:    #474f6b;          /* define the token referenced (but undefined) inline */
+  --text:     var(--ink);       /* define the token referenced (but undefined) inline */
+}
+body{ font-size: 1.06rem; }      /* ~17px reading base, up from 16px default */
+
+/* ---- 2. Hebrew / Yiddish global: a touch larger + much looser leading ---- */
+body.lang-yi{ line-height: 1.9; }
+.yi{ font-size: 1.05em; }         /* Hebrew glyphs read smaller at equal px — nudge up */
+
+/* ---- 3. Card descriptions (main "too small" offender) ---- */
+.card p{
+  font-size: 1.1rem !important;
+  line-height: 1.7;
+  color: #474f6b;
+}
+.card p .yi,
+body.lang-yi .card p{
+  font-size: 1.18rem !important;
+  line-height: 1.9 !important;
+}
+.card .heb{ font-size: 1.18rem !important; line-height: 1.65; }
+
+/* ---- 4. Prose / intro / page-hero paragraphs ---- */
+.prose p{
+  font-size: 1.12rem !important;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  color: #474f6b;
+}
+body.lang-yi .prose p{ font-size: 1.2rem !important; line-height: 1.9; }
+
+.page-hero p{ font-size: clamp(1.12rem, 1.7vw, 1.3rem) !important; color: rgba(255,255,255,.92); max-width: 720px; }
+body.lang-yi .page-hero p{ font-size: clamp(1.22rem, 2vw, 1.38rem) !important; line-height: 1.85; }
+
+/* ---- 5. Hero lede over the photo ---- */
+.hero .lede{ font-size: clamp(1.14rem, 1.7vw, 1.3rem); color: rgba(255,255,255,.9); }
+body.lang-yi .hero .lede{ font-size: clamp(1.22rem, 2vw, 1.42rem); line-height: 1.85; }
+
+/* ---- 6. Stat labels under the big gold numbers ---- */
+.stat .lab{ font-size: 1.02rem; line-height: 1.5; color: #474f6b; }
+body.lang-yi .stat .lab{ font-size: 1.12rem; line-height: 1.75; }
+
+/* ---- 7. Quick-give subtitle (focal CTA under hero) ---- */
+.quickgive .qg-sub{ font-size: 1.08rem; line-height: 1.6; color: #474f6b; }
+body.lang-yi .quickgive .qg-sub{ font-size: 1.16rem; line-height: 1.85; }
+
+/* ---- 8. Testimonial / inline body paragraphs that lean on undefined tokens ---- */
+.card p[style*="--text"]{ font-size: 1.12rem !important; line-height: 1.7; color: var(--ink) !important; }
+body.lang-yi .card p[style*="--text"]{ font-size: 1.2rem !important; line-height: 1.9; }
+p[style*="--muted"]{ color: var(--ink-soft) !important; font-size: 1.1rem; line-height: 1.7; }
+body.lang-yi p[style*="--muted"]{ font-size: 1.18rem; line-height: 1.9; }
+
+/* ---- 9. Quote block: translation, source, vocalized Hebrew verse ---- */
+.quote .tr{ font-size: 1.06rem; line-height: 1.6; }
+body.lang-yi .quote .tr{ font-size: 1.14rem; line-height: 1.85; }
+.quote .src{ font-size: 0.95rem; letter-spacing: 0; }
+.quote .heb{ font-size: 1.38rem; line-height: 1.95; letter-spacing: 0; }  /* room for nikud */
+
+/* ---- 10. Segula list (used on segulos/partner) ---- */
+.segula{ padding: 22px 24px; }
+.segula p{ font-size: 1.08rem; line-height: 1.7; color: #474f6b; }
+.segula .tag{ font-size: 1.26rem; line-height: 1.55; }
+body.lang-yi .segula p{ font-size: 1.18rem; line-height: 1.9; }
+
+/* ---- 11. Timeline / schedule descriptions (about page) ---- */
+.tline .what p{ font-size: 1.08rem; line-height: 1.65; color: #474f6b; }
+body.lang-yi .tline .what p{ font-size: 1.18rem; line-height: 1.9; }
+
+/* ---- 12. CTA band paragraph on navy ---- */
+.cta-band p{ font-size: clamp(1.1rem, 1.5vw, 1.22rem); color: rgba(255,255,255,.9); line-height: 1.7; }
+body.lang-yi .cta-band p{ font-size: clamp(1.2rem, 1.7vw, 1.32rem); line-height: 1.9; }
+
+/* ---- 13. Footer: bigger + stronger contrast on navy ---- */
+.foot a, .foot p{ font-size: 1.02rem; line-height: 1.65; color: rgba(255,255,255,.85); }
+body.lang-yi .foot a, body.lang-yi .foot p{ font-size: 1.12rem; line-height: 1.9; }
+.foot .copy{ font-size: 0.92rem; color: rgba(255,255,255,.72); }
+body.lang-yi .foot h4{ font-size: 1.45rem; line-height: 1.4; }
+
+/* ---- 14. Nav, language toggle, eyebrows, brand sub-line ---- */
+.nav-links a{ font-size: 1rem; color: #3a4264; }
+body.lang-yi .nav-links a{ font-size: 1.08rem; }
+.lang-toggle button{ font-size: 0.9rem; padding: 6px 14px; }
+body.lang-yi .lang-toggle button{ font-size: 0.98rem; }
+.eyebrow{ font-size: 0.82rem; letter-spacing: 0.2em; color: var(--gold-deep); }
+body.lang-yi .eyebrow{ font-size: 0.94rem; letter-spacing: 0; }
+.brand-text .brand-sub{ font-size: 0.8rem; letter-spacing: 0.14em; color: var(--gold-deep); }
+
+/* ---- 15. Tiers, contact, form labels (partner / contact, shared CSS) ---- */
+.tier .per{ font-size: 0.95rem; }
+.tier li{ font-size: 1.05rem; color: #474f6b; padding: 9px 0; }
+body.lang-yi .tier li{ font-size: 1.14rem; line-height: 1.85; }
+.info-line span{ font-size: 1rem; color: #474f6b; }
+.field label{ font-size: 0.95rem; color: #3a4264; font-weight: 500; }
+body.lang-yi .field label{ font-size: 1.05rem; }
+
+/* ---- 16. Emphasis weight so <strong> reads clearly at base weight 400 ---- */
+.prose p strong, p strong{ font-weight: 600; }
+      </style>
 </head>
 <body class="lang-en">
   <div class="stars"></div>
