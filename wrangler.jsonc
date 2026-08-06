@@ -1,0 +1,13 @@
+{
+  // Deploys the static site to the existing `kollel-chatzos` Worker
+  // (custom domain kollelchatzosusa.org). Assets-only — no script, no bindings.
+  "name": "kollel-chatzos",
+  "compatibility_date": "2026-06-25",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "."
+  },
+  "observability": {
+    "enabled": true
+  }
+}
