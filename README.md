@@ -39,12 +39,15 @@ python -m http.server 8000
 
 ## Deploying
 
-This is a static site, so it can be hosted free on **GitHub Pages**:
+The live site (kollelchatzosusa.org) runs as a **Cloudflare Worker serving these files as static assets**. The config is already in this repo (`wrangler.jsonc`), so deploying into your own Cloudflare account is:
 
-1. Push this repo to GitHub.
-2. In the repo go to **Settings → Pages**.
-3. Under *Build and deployment*, set **Source: Deploy from a branch**, branch `main`, folder `/ (root)`.
-4. Save — the site goes live at `https://<username>.github.io/kollel-chatzos/`.
+1. Install Node.js, then run `npx wrangler login` (opens a browser to authorize your Cloudflare account).
+2. From this folder run `npx wrangler deploy` — this creates the `kollel-chatzos` Worker in your account and uploads the site.
+3. To put it on the domain: in the Cloudflare dashboard go to **Workers & Pages → kollel-chatzos → Settings → Domains & Routes → Add → Custom domain** and enter `kollelchatzosusa.org`. (The domain must already be a zone in the same Cloudflare account.)
+
+Any time you change the HTML, run `npx wrangler deploy` again.
+
+Alternatively, since this is a pure static site (no server code), it can be hosted anywhere — e.g. free on **GitHub Pages**: repo **Settings → Pages**, Source: *Deploy from a branch*, branch `main`, folder `/ (root)`.
 
 ## Notes
 
